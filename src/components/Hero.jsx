@@ -8,13 +8,15 @@ const Hero = () => {
   const [loadedVideos, setLoadedVideos] = useState(0);
 
   const totalVideos = 4;
-  const nextVdRef = useRef(null);
+  const nextVideoRef = useRef(null);
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
 
     setCurrentIndex((prevIndex) => prevIndex + 1);
   };
+
+  const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
   return (
     <div className="relative w-screen overflow-x-hidden h-dvh">
       <div
@@ -24,7 +26,7 @@ const Hero = () => {
         <div>
           <div className="absolute z-50 overflow-hidden rounded-lg cursor-pointer mask-clip-path absolute-center size-64">
             <div onClick={handleMiniVdClick} className="origin-center">
-              <video />
+              <video ref={nextVideoRef} src={getVideoSrc(currentIndex + 1)} />
             </div>
           </div>
         </div>
