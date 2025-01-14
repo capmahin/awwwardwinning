@@ -10,6 +10,10 @@ const Hero = () => {
   const totalVideos = 4;
   const nextVideoRef = useRef(null);
 
+  const handleVideoLoad = () => {
+    setLoadedVideos((prev) => prev + 1);
+  };
+
   const handleMiniVdClick = () => {
     setHasClicked(true);
 
@@ -25,7 +29,10 @@ const Hero = () => {
       >
         <div>
           <div className="absolute z-50 overflow-hidden rounded-lg cursor-pointer mask-clip-path absolute-center size-64">
-            <div onClick={handleMiniVdClick} className="origin-center">
+            <div
+              onClick={handleMiniVdClick}
+              className="transition-all duration-500 ease-in origin-center scale-50 opacity-0 hover:scale-100 hover:opacity-100"
+            >
               <video
                 ref={nextVideoRef}
                 src={getVideoSrc(currentIndex + 1)}
@@ -33,6 +40,7 @@ const Hero = () => {
                 muted
                 id="current-video"
                 className="object-cover object-center origin-center scale-150 size-64"
+                onLoadedData={handleVideoLoad}
               />
             </div>
           </div>
