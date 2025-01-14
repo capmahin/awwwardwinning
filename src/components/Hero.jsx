@@ -1,4 +1,20 @@
+import { useRef } from "react";
+import { useState } from "react";
+
 const Hero = () => {
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [hasClicked, setHasClicked] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedVideos, setLoadedVideos] = useState(0);
+
+  const totalVideos = 4;
+  const nextVdRef = useRef(null);
+
+  const handleMiniVdClick = () => {
+    setHasClicked(true);
+
+    setCurrentIndex((prevIndex) => prevIndex + 1);
+  };
   return (
     <div className="relative w-screen overflow-x-hidden h-dvh">
       <div
