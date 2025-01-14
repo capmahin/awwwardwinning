@@ -2,7 +2,7 @@ import Hero from "./components/Hero";
 
 const App = () => {
   return (
-    <main>
+    <main className="relative w-screen min-h-screen overflow-hidden ">
       <Hero />
     </main>
   );
