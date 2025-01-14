@@ -26,7 +26,14 @@ const Hero = () => {
         <div>
           <div className="absolute z-50 overflow-hidden rounded-lg cursor-pointer mask-clip-path absolute-center size-64">
             <div onClick={handleMiniVdClick} className="origin-center">
-              <video ref={nextVideoRef} src={getVideoSrc(currentIndex + 1)} />
+              <video
+                ref={nextVideoRef}
+                src={getVideoSrc(currentIndex + 1)}
+                loop
+                muted
+                id="current-video"
+                className="object-cover object-center origin-center scale-150 size-64"
+              />
             </div>
           </div>
         </div>
