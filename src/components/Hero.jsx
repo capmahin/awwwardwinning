@@ -7,7 +7,7 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 4;
+  const totalVideos = 3;
   const nextVideoRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -37,7 +37,7 @@ const Hero = () => {
             >
               <video
                 ref={nextVideoRef}
-                src={getVideoSrc(currentIndex + 1)}
+                src={getVideoSrc(upcomingVideoIndex)}
                 loop
                 muted
                 id="current-video"
@@ -46,6 +46,8 @@ const Hero = () => {
               />
             </div>
           </div>
+
+          <video ref={nextVideoRef} src={getVideoSrc(currentIndex)} />
         </div>
       </div>
     </div>
