@@ -47,7 +47,14 @@ const Hero = () => {
             </div>
           </div>
 
-          <video ref={nextVideoRef} src={getVideoSrc(currentIndex)} />
+          <video
+            ref={nextVideoRef}
+            src={getVideoSrc(currentIndex)}
+            loop
+            muted
+            id="next-video"
+            className="absolute z-20 invisible object-cover object-center absolute-center size-64"
+          />
         </div>
       </div>
     </div>
