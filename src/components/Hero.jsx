@@ -14,10 +14,12 @@ const Hero = () => {
     setLoadedVideos((prev) => prev + 1);
   };
 
+  const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
+
   const handleMiniVdClick = () => {
     setHasClicked(true);
 
-    setCurrentIndex((prevIndex) => prevIndex + 1);
+    setCurrentIndex(upcomingVideoIndex);
   };
 
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
