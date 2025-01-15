@@ -60,8 +60,16 @@ const Hero = () => {
             src={getVideoSrc(
               currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
+            autoPlay
+            loop
+            muted
+            className="absolute top-0 left-0 object-cover object-center size-full"
+            onLoadedData={handleVideoLoad}
           />
         </div>
+        <h1 className="absolute special-font hero-heading bottom-5 right-5 text-blue-75">
+          G<b>a</b>ming
+        </h1>
       </div>
     </div>
   );
