@@ -54,6 +54,12 @@ const Hero = () => {
             muted
             id="next-video"
             className="absolute z-20 invisible object-cover object-center absolute-center size-64"
+            onLoadedData={handleVideoLoad}
+          />
+          <video
+            src={getVideoSrc(
+              currentIndex === totalVideos - 1 ? 1 : currentIndex
+            )}
           />
         </div>
       </div>
