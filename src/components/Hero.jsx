@@ -75,6 +75,7 @@ const Hero = () => {
             <h1 className="text-blue-100 special-font hero-heading">
               redefi<b>n</b>e
             </h1>
+            <div className="absolute top-0 left-0 z-40 size-full"></div>
           </div>
         </div>
       </div>
