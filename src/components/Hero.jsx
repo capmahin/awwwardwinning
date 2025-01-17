@@ -75,7 +75,9 @@ const Hero = () => {
             <h1 className="text-blue-100 special-font hero-heading">
               redefi<b>n</b>e
             </h1>
-            <div className="absolute top-0 left-0 z-40 size-full"></div>
+            <p className="mb-5 text-blue-100 max-w-64 font-robert-regular">
+              Enter the Metagame Layer
+            </p>
           </div>
         </div>
       </div>
