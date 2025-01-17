@@ -76,7 +76,7 @@ const Hero = () => {
               redefi<b>n</b>e
             </h1>
             <p className="mb-5 text-blue-100 max-w-64 font-robert-regular">
-              Enter the Metagame Layer
+              Enter the Metagame Layer <br /> Unleash the Play Economy
             </p>
           </div>
         </div>
