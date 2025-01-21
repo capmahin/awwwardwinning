@@ -69,7 +69,7 @@ const Hero = () => {
             onLoadedData={handleVideoLoad}
           />
         </div>
-        <h1 className="absolute special-font hero-heading bottom-5 right-5 text-blue-75">
+        <h1 className="absolute z-40 special-font hero-heading bottom-5 right-5 text-blue-75">
           G<b>a</b>ming
         </h1>
         <div className="absolute top-0 left-0 z-40 size-full">
@@ -84,11 +84,14 @@ const Hero = () => {
               id="watch-trailer"
               title="Watch Trailer"
               leftIcon={<TiLocationArrow />}
-              containerClass="bg-yellow-300 flex-center gap-1"
+              containerClass="!bg-yellow-300 flex-center gap-1"
             />
           </div>
         </div>
       </div>
+      <h1 className="absolute text-black special-font hero-heading bottom-5 right-5">
+        G<b>a</b>ming
+      </h1>
     </div>
   );
 };
