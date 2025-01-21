@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -37,6 +38,12 @@ const Hero = () => {
           duration: 1,
           ease: "power1.inOut",
           onStart: () => nextVideoRef.current.play()
+        });
+        gsap.from("#current-video", {
+          transformOrigin: "center center",
+          scale: 0,
+          duration: 1.5,
+          ease: "power1.inOut"
         });
       }
     },
