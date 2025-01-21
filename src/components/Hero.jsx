@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
@@ -25,6 +25,12 @@ const Hero = () => {
 
     setCurrentIndex(upcomingVideoIndex);
   };
+
+  useEffect(() => {
+    if (loadedVideos === totalVideos - 1) {
+      setIsLoading(false);
+    }
+  }, [loadedVideos]);
 
   useGSAP(
     () => {
@@ -72,7 +78,11 @@ const Hero = () => {
   return (
     <div className="relative w-screen overflow-x-hidden h-dvh">
       {isLoading && (
-        <div>
+        <div
+          className="flex-center absolute z-[100]
+        h-dvh w-screen overflow-hidden
+        bg-violet-50"
+        >
           <div className="three-body">
             <div className="three-body__dot" />
             <div className="three-body__dot" />
