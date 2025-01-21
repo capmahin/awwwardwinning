@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
+import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -23,6 +24,8 @@ const Hero = () => {
 
     setCurrentIndex(upcomingVideoIndex);
   };
+
+  useGSAP(() => {}, { dependencies: [currentIndex], revertOnUpdate: true });
 
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
   return (
@@ -62,7 +65,7 @@ const Hero = () => {
             src={getVideoSrc(
               currentIndex === totalVideos - 1 ? 1 : currentIndex
             )}
-            // autoPlay
+            autoPlay
             loop
             muted
             className="absolute top-0 left-0 object-cover object-center size-full"
