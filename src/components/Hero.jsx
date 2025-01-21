@@ -50,6 +50,8 @@ const Hero = () => {
     { dependencies: [currentIndex], revertOnUpdate: true }
   );
 
+  useGSAP(() => {});
+
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
   return (
     <div className="relative w-screen overflow-x-hidden h-dvh">
