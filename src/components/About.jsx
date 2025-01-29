@@ -3,6 +3,8 @@ import React from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
   useGSAP(() => {
     const clipAnimation = gsap.timeline({
