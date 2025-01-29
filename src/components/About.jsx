@@ -22,6 +22,15 @@ const About = () => {
           </p>
         </div>
       </div>
+      <div className="w-screen h-dvh" id="clip">
+        <div className="mask-clip-path about-image">
+          <img
+            src="img/about.webp"
+            alt="Background"
+            className="absolute top-0 left-0 object-cover size-full"
+          />
+        </div>
+      </div>
     </div>
   );
 };
