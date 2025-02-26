@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const AnimatedTitle = ({ title, containerClass }) => {
   const containerRef = useRef(null);
 
@@ -27,6 +29,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
         0
       );
     }, containerRef);
+    return () => ctx.revert();
   }, []);
   return (
     <div ref={containerRef} className={`"animated-title ${containerClass}`}>
