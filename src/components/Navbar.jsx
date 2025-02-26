@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed z-50 h-16 transition-all duration-700 border-none insert-x-0 top-4 sm:inset-x-6"
+      className="fixed inset-x-0 z-50 h-16 transition-all duration-700 border-none top-4 sm:inset-x-6"
     >
       <header className="absolute w-full -translate-y-1/2 top-1/2">
         <nav className="flex items-center justify-between p-4 size-full">
@@ -17,7 +17,13 @@ const Navbar = () => {
               id="product-button"
               title="Products"
               rightIcon={<TiLocationArrow />}
+              containerClass="bg-blue-50
+                          md:flex hidden items-center
+                          justify-center gap-1"
             />
+          </div>
+          <div className="flex items-center h-full">
+            <div className="hidden md:block"></div>
           </div>
         </nav>
       </header>
