@@ -5,6 +5,8 @@ import { TiLocationArrow } from "react-icons/ti";
 const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
 const Navbar = () => {
   const navContainerRef = useRef(null);
+  const audioElementRef = useRef(null);
+  const toggleAudioIndicator = () => {};
   return (
     <div
       ref={navContainerRef}
@@ -35,6 +37,18 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
+            <button
+              className="ml-10 flex items-center
+            space-x-0.5"
+              onClick={toggleAudioIndicator}
+            >
+              <audio
+                ref={audioElementRef}
+                className="hidden"
+                src="/audio/loop.mp3"
+                loop
+              ></audio>
+            </button>
           </div>
         </nav>
       </header>
