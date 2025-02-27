@@ -21,7 +21,11 @@ const Navbar = () => {
     } else if (currentScrollY > lastScrollY) {
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
+    } else if (currentScrollY < lastScrollY) {
+      setIsNavVisible(true);
+      navContainerRef.current.classList.add("floating-nav");
     }
+    setLastScrollY(currentScrollY);
   }, [currentScrollY]);
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
