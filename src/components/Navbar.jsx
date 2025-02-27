@@ -27,6 +27,8 @@ const Navbar = () => {
     }
     setLastScrollY(currentScrollY);
   }, [currentScrollY]);
+
+  useEffect(() => {}, [isNavVisible]);
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
 
