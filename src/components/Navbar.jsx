@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 
@@ -10,7 +10,10 @@ const Navbar = () => {
   const audioElementRef = useRef(null);
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
+
+    setIsIndicatorActive((prev) => !prev);
   };
+  useEffect(() => {}, [isAudioPlaying]);
   return (
     <div
       ref={navContainerRef}
