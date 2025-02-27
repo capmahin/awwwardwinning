@@ -48,7 +48,9 @@ const Navbar = () => {
                 src="/audio/loop.mp3"
                 loop
               >
-                {[1, 2, 3, 4]}
+                {[1, 2, 3, 4].map((bar) => (
+                  <div key={bar}></div>
+                ))}
               </audio>
             </button>
           </div>
