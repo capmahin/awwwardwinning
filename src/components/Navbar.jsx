@@ -13,7 +13,13 @@ const Navbar = () => {
 
     setIsIndicatorActive((prev) => !prev);
   };
-  useEffect(() => {}, [isAudioPlaying]);
+  useEffect(() => {
+    if (isAudioPlaying) {
+      audioElementRef.current.play();
+    } else {
+      audioElementRef.current.pause();
+    }
+  }, [isAudioPlaying]);
   return (
     <div
       ref={navContainerRef}
@@ -54,17 +60,16 @@ const Navbar = () => {
                 className="hidden"
                 src="/audio/loop.mp3"
                 loop
-              >
-                {[1, 2, 3, 4].map((bar) => (
-                  <div
-                    key={bar}
-                    className={`indicator-line${
-                      isIndicatorActive ? "active" : ""
-                    }`}
-                    style={{ animationDelay: `${bar * 0.1}s` }}
-                  />
-                ))}
-              </audio>
+              />
+              {[1, 2, 3, 4].map((bar) => (
+                <div
+                  key={bar}
+                  className={`indicator-line${
+                    isIndicatorActive ? "active" : ""
+                  }`}
+                  style={{ animationDelay: `${bar * 0.1}s` }}
+                />
+              ))}
             </button>
           </div>
         </nav>
