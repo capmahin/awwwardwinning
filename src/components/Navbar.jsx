@@ -47,7 +47,9 @@ const Navbar = () => {
                 className="hidden"
                 src="/audio/loop.mp3"
                 loop
-              ></audio>
+              >
+                {[1, 2, 3, 4]}
+              </audio>
             </button>
           </div>
         </nav>
