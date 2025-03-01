@@ -1,5 +1,8 @@
 import React from "react";
 
+const BentoCard = ({ src, title, description, isComingSoon }) => {
+  return <div>{title}</div>;
+};
 const Features = () => {
   return (
     <section className="bg-black pb-52">
@@ -18,7 +21,18 @@ const Features = () => {
       <div
         className="border-hsla relative mb-7 h-96 w-full
           overflow-hidden rounded-md md:h-[65vh]"
-      ></div>
+      >
+        <BentoCard
+          src="videos/feature-1.mp4"
+          title={
+            <>
+              radi<b>n</b>t
+            </>
+          }
+          description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+          isComingSoon
+        />
+      </div>
     </section>
   );
 };
