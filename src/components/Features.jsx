@@ -64,6 +64,17 @@ const Features = () => {
               description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
             />
           </div>
+          <div className="row-span-1 bento-tilt_1 ms-32 md:col-span-1 md:ms-0">
+            <BentoCard
+              src="videos/feature-3.mp4"
+              title={
+                <>
+                  n<b>e</b>xus
+                </>
+              }
+              description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+            />
+          </div>
         </div>
       </div>
     </section>
