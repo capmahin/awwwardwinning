@@ -75,6 +75,17 @@ const Features = () => {
               description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
             />
           </div>
+          <div className=" bento-tilt_1 me-14 md:col-span-1 md:me-0">
+            <BentoCard
+              src="videos/feature-4.mp4"
+              title={
+                <>
+                  az<b>u</b>l
+                </>
+              }
+              description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            />
+          </div>
         </div>
       </div>
     </section>
