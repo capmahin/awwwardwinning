@@ -12,7 +12,10 @@ const BentoCard = ({ src, title, description, isComingSoon }) => {
       />
       <div className="relative z-10 flex flex-col justify-between p-5 size-full text-blue-50">
         <div>
-          <h1 className="bento-title">{title}</h1>
+          <h1 className="bento-title special-font">{title}</h1>
+          {description && (
+            <p className="mt-3 text-xs max-w-64 md:text-base">{description}</p>
+          )}
         </div>
       </div>
       {title}
