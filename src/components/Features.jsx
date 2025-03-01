@@ -10,6 +10,11 @@ const BentoCard = ({ src, title, description, isComingSoon }) => {
         autoPlay
         className="absolute top-0 left-0 object-cover object-center size-full"
       />
+      <div className="relative z-10 flex flex-col justify-between p-5 size-full text-blue-50">
+        <div>
+          <h1>{title}</h1>
+        </div>
+      </div>
       {title}
     </div>
   );
