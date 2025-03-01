@@ -1,4 +1,5 @@
 import React from "react";
+import { TiLocationArrow } from "react-icons/ti";
 
 const BentoCard = ({ src, title, description }) => {
   return (
@@ -85,6 +86,15 @@ const Features = () => {
               }
               description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
             />
+          </div>
+          <div className="bento-tilt_2">
+            <div className="flex flex-col justify-between p-5 size-full bg-violet-300">
+              <h1 className="text-black bento-title special-font max-w-64">
+                M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
+              </h1>
+
+              <TiLocationArrow className="m-5 scale-[5] self-end" />
+            </div>
           </div>
         </div>
       </div>
