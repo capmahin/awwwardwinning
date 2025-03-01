@@ -54,7 +54,15 @@ const Features = () => {
         </div>
         <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
           <div className="row-span-1 bento-tilt_1 md:col-span-1 md:row-span-2">
-            <BentoCard />
+            <BentoCard
+              src="videos/feature-2.mp4"
+              title={
+                <>
+                  zig<b>m</b>a
+                </>
+              }
+              description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+            />
           </div>
         </div>
       </div>
