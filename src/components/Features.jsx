@@ -52,7 +52,11 @@ const Features = () => {
             description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
           />
         </div>
-        <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7"></div>
+        <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
+          <div className="row-span-1 bento-tilt_1 md:col-span-1 md:row-span-2">
+            <BentoCard />
+          </div>
+        </div>
       </div>
     </section>
   );
