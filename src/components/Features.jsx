@@ -1,7 +1,18 @@
 import React from "react";
 
 const BentoCard = ({ src, title, description, isComingSoon }) => {
-  return <div>{title}</div>;
+  return (
+    <div className="relative size-full">
+      <video
+        src={src}
+        loop
+        muted
+        autoPlay
+        className="absolute top-0 left-0 object-cover object-center size-full"
+      />
+      {title}
+    </div>
+  );
 };
 const Features = () => {
   return (
