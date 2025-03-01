@@ -52,6 +52,7 @@ const Features = () => {
             description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
           />
         </div>
+        <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7"></div>
       </div>
     </section>
   );
