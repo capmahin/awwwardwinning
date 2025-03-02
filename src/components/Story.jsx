@@ -55,7 +55,7 @@ const Story = () => {
             title="the st<b>o</b>ry of <br /> a hidden real<b>m</b>"
             sectionId="#story"
             containerClass="mt-5 pointer-events-none
-            mix-blend-differnce relative z-10"
+            mix-blend-difference relative z-10"
           />
           <div className="story-img-container">
             <div className="story-img-mask">
