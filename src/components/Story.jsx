@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import AnimatedTitle from "./AnimatedTitle";
-
+import Button from "./Button";
 import gsap from "gsap";
 import RoundedCorners from "./RoundedCorners";
 
@@ -82,6 +82,11 @@ const Story = () => {
               Discover its secrets and shape your fate amidst infinite
               opportunities.
             </p>
+            <Button
+              id="realm-btn"
+              title="discover prologue"
+              containerClass="mt-5"
+            />
           </div>
         </div>
       </div>
