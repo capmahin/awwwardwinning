@@ -15,6 +15,13 @@ const Story = () => {
             containerClass="mt-5 pointer-events-none
             mix-blend-differnce relative z-10"
           />
+          <div className="story-img-container">
+            <div className="story-img-mask">
+              <div className="story-img-cotent">
+                <img src="/img/entrance.webp" alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
