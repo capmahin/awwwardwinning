@@ -75,6 +75,15 @@ const Story = () => {
             <RoundedCorners />
           </div>
         </div>
+        <div className="flex justify-center w-full -mt-80 md:-mt-64 md:me-44 md:justify-end">
+          <div className="flex flex-col items-center h-full w-fit md:items-start">
+            <p className="max-w-sm mt-3 text-center font-circular-web text-violet-50 md:text-start">
+              Where realms converge, lies Zentry and the boundless pillar.
+              Discover its secrets and shape your fate amidst infinite
+              opportunities.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
