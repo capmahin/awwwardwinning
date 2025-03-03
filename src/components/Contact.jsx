@@ -26,6 +26,7 @@ const Contact = () => {
             src="img/swordman.webp"
           />
         </div>
+        <div className="flex flex-col items-center text-center"></div>
       </div>
     </div>
   );
