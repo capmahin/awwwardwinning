@@ -21,6 +21,10 @@ const Contact = () => {
             clipClass="absolute md:scale-125"
             src="img/swordman-partial.webp"
           />
+          <ImageClipBox
+            clipClass="sword-man-clip-path md:scale-125"
+            src="img/swordman.webp"
+          />
         </div>
       </div>
     </div>
