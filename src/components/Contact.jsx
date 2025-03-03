@@ -26,7 +26,9 @@ const Contact = () => {
             src="img/swordman.webp"
           />
         </div>
-        <div className="flex flex-col items-center text-center"></div>
+        <div className="flex flex-col items-center text-center">
+          <p className="font-general text-[10px] uppercase">Join Zentry</p>
+        </div>
       </div>
     </div>
   );
