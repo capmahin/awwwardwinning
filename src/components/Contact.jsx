@@ -28,19 +28,17 @@ const Contact = () => {
           />
         </div> */}
         <div className="absolute -top-40 left-20 w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-10 lg:w-70">
-          <ImageClipBox
+          {/* <ImageClipBox
             clipClass="absolute md:scale-125"
-            src="img/swordman-partial.webp"
-          />
+            src="img/swordman.jpg"
+          /> */}
           <ImageClipBox
             clipClass="sword-man-clip-path md:scale-125"
-            src="img/swordman.webp"
+            src="img/swordman.jpg"
           />
         </div>
         <div className="flex flex-col items-center text-center">
-          <p className="font-general text-[10px] uppercase">
-            Join Devil May Cry
-          </p>
+          <p className="font-general text-[10px] uppercase">Join assassin's</p>
           <p
             className="special-font mt-10 w-full font-zentry 
           text-5xl leading-[0.9] md:text-[6rem]"
