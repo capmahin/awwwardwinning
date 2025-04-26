@@ -38,7 +38,12 @@ const Contact = () => {
           />
         </div>
         <div className="flex flex-col items-center text-center">
-          <p className="font-general text-[10px] uppercase">Join assassin's</p>
+          <p
+            className="special-font mt-10 w-full font-zentry 
+          text-5xl leading-[0.9] md:text-[2rem]"
+          >
+            Join <b>a</b>ss<b>a</b>ssin'<b>s</b>
+          </p>
           <p
             className="special-font mt-10 w-full font-zentry 
           text-5xl leading-[0.9] md:text-[6rem]"

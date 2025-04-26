@@ -27,8 +27,8 @@ const About = () => {
   return (
     <div id="about" className="w-screen min-h-screen">
       <div className="relative flex flex-col items-center gap-5 mb-8 mt-36">
-        <h2 className="font-general text-sm uppercase md:text-[10px]">
-          Welcome to Zentry
+        <h2 className="font-general text-sm uppercase md:text-[20px]">
+          Welcome to Gaming World
         </h2>
 
         <AnimatedTitle
