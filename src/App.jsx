@@ -11,7 +11,7 @@ const App = () => {
     <main className="relative w-screen min-h-screen overflow-x-hidden ">
       <Navbar />
       <Hero />
-
+      {/* Above is the Hero Section */}
       <About />
       <Features />
       <Story />

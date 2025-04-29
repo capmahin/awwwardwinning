@@ -9,6 +9,12 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
+  const allVideoLinks = [
+    "https://firebasestorage.googleapis.com/v0/b/functions-practice-cf70c.firebasestorage.app/o/hero-1.mp4?alt=media&token=73cb3c45-4d29-4b44-affe-8923d0b06bb3",
+    "https://firebasestorage.googleapis.com/v0/b/functions-practice-cf70c.firebasestorage.app/o/hero-2.mp4?alt=media&token=93e4577b-f156-4158-b89b-fa47329a79a1",
+    "https://firebasestorage.googleapis.com/v0/b/functions-practice-cf70c.firebasestorage.app/o/hero-3.mp4?alt=media&token=8a7037a6-804a-4099-a674-798d2c3cb629",
+    "https://firebasestorage.googleapis.com/v0/b/functions-practice-cf70c.firebasestorage.app/o/hero-4.mp4?alt=media&token=99a7c2d9-2b67-4e0e-a999-b2cb9e0e7191",
+  ];
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -77,7 +83,10 @@ const Hero = () => {
     });
   });
 
-  const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
+  const getVideoSrc = (index) => {
+    // return `videos/hero-${index}.mp4`;
+    return allVideoLinks[index - 1];
+  };
   return (
     <div className="relative w-screen overflow-x-hidden h-dvh">
       {isLoading && (
