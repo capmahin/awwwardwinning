@@ -1,13 +1,59 @@
-import React from "react";
+import React, { useRef } from "react";
 import Button from "./Button";
-
-const ImageClipBox = ({ src, clipClass }) => (
-  <div className={clipClass}>
-    <img src={src} />
-  </div>
-);
+import gsap from "gsap";
 
 const Contact = () => {
+  const frameRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const element = frameRef.current;
+
+    if (!element) return;
+
+    const rect = element.getBoundingClientRect();
+    const xPos = clientX - rect.left;
+    const yPos = clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((yPos - centerY) / centerY) * -10;
+    const rotateY = ((xPos - centerX) / centerX) * 10;
+
+    gsap.to(element, {
+      duration: 0.3,
+      rotateX,
+      rotateY,
+      transformPerspective: 500,
+      ease: "power1.out"
+    });
+  };
+
+  const handleMouseLeave = () => {
+    const element = frameRef.current;
+
+    if (element) {
+      gsap.to(element, {
+        duration: 0.3,
+        rotateX: 0,
+        rotateY: 0,
+        ease: "power1.in"
+      });
+    }
+  };
+  const ImageClipBox = ({ src, clipClass }) => (
+    <div className={clipClass}>
+      <img
+        src={src}
+        ref={frameRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onMouseUp={handleMouseLeave}
+        onMouseEnter={handleMouseLeave}
+      />
+    </div>
+  );
   return (
     <div id="contact" className="w-screen px-10 my-20 min-h-96">
       <div className="relative py-24 bg-black rounded-lg text-blue-50 sm:overflow-hidden">
