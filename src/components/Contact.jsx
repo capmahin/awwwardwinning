@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Button from "./Button";
 import gsap from "gsap";
+import AnimatedTitle from "./AnimatedTitle";
 
 const Contact = () => {
   const frameRef = useRef(null);
@@ -96,13 +97,13 @@ const Contact = () => {
           >
             Join <b>a</b>ss<b>a</b>ssin'<b>s</b>
           </p>
-          <p
-            className="special-font mt-10 w-full font-zentry 
-          text-5xl leading-[0.9] md:text-[6rem]"
-          >
-            Let's b<b>u</b>ild the <br /> new era of <br /> g<b>a</b>ming t
-            <b>o</b>gether
-          </p>
+          <AnimatedTitle
+            sectionId="#story"
+            containerClass="mt-5 pointer-events-none
+            mix-blend-difference relative z-10"
+            title="Let's b<b>u</b>ild the <br /> new era of <br /> g<b>a</b>ming 🎮🕹️
+            t<b>o</b>gether"
+          />
 
           <Button title="contact us" containerClass="mt-10 cursor-pointer" />
         </div>
