@@ -85,7 +85,7 @@ const Hero = () => {
 
   const getVideoSrc = (index) => {
     // return `videos/hero-${index}.mp4`;
-    return allVideoLinks[index];
+    return allVideoLinks[index - 1];
   };
   return (
     <div className="relative w-screen overflow-x-hidden h-dvh">
