@@ -134,6 +134,7 @@ const Hero = () => {
             className="absolute z-20 invisible object-cover object-center absolute-center size-64"
             onLoadedData={handleVideoLoad}
           />
+
           <video
             src={getVideoSrc(
               currentIndex === totalVideos - 1 ? 1 : currentIndex
@@ -146,7 +147,7 @@ const Hero = () => {
           />
           <button
             onClick={handleMiniVdClick}
-            className="relative opacity-60 hover:opacity-80 text-black rounded-full border border-gray-200 bg-white font-bold  left-96 top-96 z-[200] "
+            className="relative origin-center top-64 -right-56 opacity-60 hover:opacity-80 text-black rounded-full border border-gray-200 bg-white font-bold   z-[200] "
           >
             <MdOutlineKeyboardArrowRight className="w-12 h-12 font-bold" />
           </button>
