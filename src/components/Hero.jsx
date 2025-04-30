@@ -86,10 +86,14 @@ const Hero = () => {
         <div
           className="flex-center absolute z-[100]
         h-dvh w-screen overflow-hidden
-        bg-violet-50"
+        bg-black"
         >
+          <h1 className="text-xl text-white special-font font-zentry">
+            Please Wait
+          </h1>
+          <img src="/img/swordman-partial.webp" alt="logo" className="w-20" />
           <div className="three-body">
-            <div className="three-body__dot" />
+            <div className="three-body__dot " />
             <div className="three-body__dot" />
             <div className="three-body__dot" />
           </div>
@@ -102,6 +106,7 @@ const Hero = () => {
         <div>
           <div className="absolute z-50 overflow-hidden rounded-lg cursor-pointer mask-clip-path absolute-center size-64">
             {/* minivideo link start */}
+
             <div
               onClick={handleMiniVdClick}
               className="transition-all duration-500 ease-in origin-left scale-50 opacity-0 hover:scale-100 hover:opacity-1"
