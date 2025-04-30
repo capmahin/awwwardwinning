@@ -88,6 +88,10 @@ const Hero = () => {
         h-dvh w-screen overflow-hidden
         bg-violet-50"
         >
+          <h1 className="text-xl text-white special-font font-zentry">
+            Please Wait
+          </h1>
+          <img src="/img/swordman-partial.webp" alt="logo" className="w-20" />
           <div className="three-body">
             <div className="three-body__dot" />
             <div className="three-body__dot" />
