@@ -40,7 +40,7 @@ const Hero = () => {
       if (hasClicked) {
         gsap.set("#next-video", { visibility: "visible" });
         gsap.to("#next-video", {
-          transformOrigin: "center center",
+          transformOrigin: "center left",
           scale: 1,
           width: "100%",
           height: "100%",
@@ -49,7 +49,7 @@ const Hero = () => {
           onStart: () => nextVideoRef.current.play()
         });
         gsap.from("#current-video", {
-          transformOrigin: "center center",
+          transformOrigin: "center left",
           scale: 0,
           duration: 1.5,
           ease: "power1.inOut"
@@ -70,8 +70,8 @@ const Hero = () => {
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: "#video-frame",
-        start: "center center",
-        end: "bottom center",
+        start: "center left",
+        end: "bottom left",
         scrub: true
       }
     });
@@ -101,11 +101,12 @@ const Hero = () => {
       >
         <div>
           <div className="absolute z-50 overflow-hidden rounded-lg cursor-pointer mask-clip-path absolute-center size-64">
+            {/* minivideo link start */}
             <div
               onClick={handleMiniVdClick}
-              className="transition-all duration-500 ease-in origin-center scale-50 opacity-0 hover:scale-100 hover:opacity-100"
+              className="transition-all duration-500 ease-in origin-left scale-50 opacity-0 hover:scale-100 hover:opacity-1"
             >
-              <video
+              {/* <TiLocationArrow
                 ref={nextVideoRef}
                 src={getVideoSrc(upcomingVideoIndex)}
                 loop
@@ -113,8 +114,19 @@ const Hero = () => {
                 id="current-video"
                 className="object-cover object-center origin-center scale-150 size-64"
                 onLoadedData={handleVideoLoad}
+              /> */}
+
+              <video
+                ref={nextVideoRef}
+                src={getVideoSrc(upcomingVideoIndex)}
+                loop
+                muted
+                id="current-video"
+                className="object-cover object-left origin-left scale-150 size-64"
+                onLoadedData={handleVideoLoad}
               />
             </div>
+            {/* minivideo link End */}
           </div>
 
           <video
