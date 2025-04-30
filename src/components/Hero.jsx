@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import { useState } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -107,19 +109,9 @@ const Hero = () => {
           <div className="absolute z-50 overflow-hidden rounded-lg cursor-pointer mask-clip-path absolute-center size-64">
             {/* minivideo link start */}
             <div
-              onClick={handleMiniVdClick}
-              className="transition-all duration-500 ease-in origin-left scale-50 opacity-0 hover:scale-100 hover:opacity-1"
+              // onClick={handleMiniVdClick}
+              className="transition-all duration-500 ease-in origin-left scale-50 opacity-0 hover:scale-100 hover:opacity-0"
             >
-              {/* <TiLocationArrow
-                ref={nextVideoRef}
-                src={getVideoSrc(upcomingVideoIndex)}
-                loop
-                muted
-                id="current-video"
-                className="object-cover object-center origin-center scale-150 size-64"
-                onLoadedData={handleVideoLoad}
-              /> */}
-
               <video
                 ref={nextVideoRef}
                 src={getVideoSrc(upcomingVideoIndex)}
@@ -152,6 +144,12 @@ const Hero = () => {
             className="absolute top-0 left-0 object-cover object-center size-full"
             onLoadedData={handleVideoLoad}
           />
+          <button
+            onClick={handleMiniVdClick}
+            className="relative opacity-60 hover:opacity-80 text-black rounded-full border border-gray-200 bg-white font-bold  left-96 top-96 z-[200] "
+          >
+            <MdOutlineKeyboardArrowRight className="w-12 h-12 font-bold" />
+          </button>
         </div>
         <h1 className="absolute z-40 special-font hero-heading bottom-5 right-5 text-blue-75">
           G<b>a</b>ming
