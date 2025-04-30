@@ -86,7 +86,7 @@ const Hero = () => {
         <div
           className="flex-center absolute z-[100]
         h-dvh w-screen overflow-hidden
-        bg-violet-50"
+        bg-black"
         >
           <h1 className="text-xl text-white special-font font-zentry">
             Please Wait
