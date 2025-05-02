@@ -151,7 +151,7 @@ const Hero = () => {
             <img
               src="img/arrow.png"
               alt="arrow"
-              className="w-20 h-20 p-1 hover:w-24 hover:h-24 opacity-100 hover:opacity-120 animate-[pulse_2s_infinite]  shadow-[0_0_20px_10px_rgba(255,255,255,0.5)]"
+              className="w-20 h-20 p-1 hover:w-24 hover:h-24 opacity-100 hover:opacity-120 animate-[pulse_2s_infinite] [0_0_20px_10px_rgba(255,255,255,0.5)]"
             />
           </button>
         </div>
