@@ -147,9 +147,13 @@ const Hero = () => {
           />
           <button
             onClick={handleMiniVdClick}
-            className="absolute right-6 top-1/2 -translate-y-1/2 opacity-60 hover:opacity-80 text-black rounded-full border border-gray-200 bg-white font-bold   z-[200] "
+            className="absolute right-6 top-1/2 -translate-y-1/2 opacity-80 hover:opacity-100 text-black rounded-full border border-transparent bg-transparent font-bold   z-[200] "
           >
-            <MdOutlineKeyboardArrowRight className="w-12 h-12 font-bold" />
+            <img
+              src="img/arrow.png"
+              alt="arrow"
+              className="w-12 h-12 font-bold hover:h-16 hover:w-16"
+            />
           </button>
         </div>
         <h1 className="absolute z-40 special-font hero-heading bottom-5 right-5 text-blue-75">
