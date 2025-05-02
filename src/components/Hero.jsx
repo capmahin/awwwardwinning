@@ -145,13 +145,13 @@ const Hero = () => {
           />
           <button
             onClick={handleMiniVdClick}
-            className="absolute right-6 top-1/2 -translate-y-1/2 opacity-80 hover:opacity-100 text-black rounded-full border border-transparent bg-transparent font-bold   z-[200] "
+            className="absolute right-6 top-1/2 -translate-y-1/2 opacity-80 hover:opacity-100 text-black  font-bold   z-[200] "
           >
             {/* add padding */}
             <img
               src="img/arrow.png"
               alt="arrow"
-              className="w-20 h-20 p-1 hover:w-24 hover:h-24 opacity-100 hover:opacity-120 animate-[pulse_2s_infinite] [0_0_20px_10px_rgba(255,255,255,0.5)]"
+              className="w-14 md:w-16 h-14 md:h-16 p-1 hover:w-16 hover:h-16   animate-[pulse_2s_infinite] "
             />
           </button>
         </div>
